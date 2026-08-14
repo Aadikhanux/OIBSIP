@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Tasks | To-Do App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <div>
+                <p class="eyebrow">PERSONAL PRODUCTIVITY</p>
+                <h1>My Tasks</h1>
+                <p class="subtitle">
+                    Keep track of what needs to be done.
+                </p>
+            </div>
+
+            <div class="date" id="currentDate"></div>
+        </header>
+
+
+        <!-- ADD TASK -->
+
+        <section class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                maxlength="100"
+            >
+
+            <button id="addTaskButton">
+                Add Task
+            </button>
+
+        </section>
+
+
+        <!-- TASK LISTS -->
+
+        <section class="task-section">
+
+            <!-- PENDING -->
+
+            <div class="list-header">
+
+                <div>
+                    <h2>Pending Tasks</h2>
+                    <span id="pendingCount">0 pending</span>
+                </div>
+
+            </div>
+
+            <div id="pendingList" class="task-list">
+
+                <div class="empty-state" id="pendingEmpty">
+                    <div class="empty-icon">✓</div>
+                    <h3>No pending tasks</h3>
+                    <p>
+                        You're all caught up. Add a new task above.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- COMPLETED -->
+
+            <div class="list-header completed-header">
+
+                <div>
+                    <h2>Completed Tasks</h2>
+                    <span id="completedCount">0 completed</span>
+                </div>
+
+            </div>
+
+            <div id="completedList" class="task-list">
+
+                <div class="empty-state" id="completedEmpty">
+                    <div class="empty-icon">○</div>
+                    <h3>No completed tasks</h3>
+                    <p>
+                        Completed tasks will appear here.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <p>Simple tasks. Clear progress.</p>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
